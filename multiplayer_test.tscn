@@ -1,10 +1,64 @@
-[gd_scene load_steps=3 format=3 uid="uid://dyygcss03tvst"]
+[gd_scene load_steps=8 format=4 uid="uid://dyygcss03tvst"]
 
 [ext_resource type="Script" uid="uid://cbvy7fmh856l7" path="res://multiplayer_test.gd" id="1_sjw14"]
 [ext_resource type="PackedScene" uid="uid://dbcf4orn631hi" path="res://basic_player.tscn" id="2_q3bjm"]
 
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_sjw14"]
+_data = PackedByteArray("AAADAAUAAAABAAAAQAAAAEAAAAA6AQAAUklGRjIBAABXRUJQVlA4TCUBAAAvP8APED9ANGCx/y8TvSBLmlPIpG3i3+CYgXnYpxiSJGaDv8SRnMKxxO/8BwDoJQl5ubZY+wA52962DbgB/4Oks72BxAlsYQGXfwCn4J7K/VVsID23iP4zctvGkTLlyi2vkJ9ygOguBSFnHkrRFHFuhlG1CTjzdlSSye/s9/Nm63f2igNxaN3OXLQhG1q65bzWmSQfLXmdeVxkNbmdel4wqtspOxLAUydepxxImtVOvE7Jiz0x3U65mL1PDL9T8pLhd4qgVojcdN7+z247YwPIP3uA6C4ltvJQiqZIm2FUbSL3dlSSgavfz5ttIMWBOPjLRRuyoSV/Z5J8DDQusupP5x4DyY4E8NSJuwNJsxooL3aNfNiL2ft8B67oLYJaIbEB5JceAQA=")
+size_override = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3bjm"]
+atlas = SubResource("PortableCompressedTexture2D_sjw14")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pg252"]
+atlas = SubResource("PortableCompressedTexture2D_sjw14")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lyao"]
+atlas = SubResource("PortableCompressedTexture2D_sjw14")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xucra"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3bjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3bjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg252")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg252")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lyao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lyao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg252")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pg252")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3bjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3bjm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="MultiplayerTest" type="Node2D"]
-position = Vector2(297, 470)
+position = Vector2(139, 554)
 script = ExtResource("1_sjw14")
 player_scene = ExtResource("2_q3bjm")
 
@@ -25,6 +79,33 @@ text = "Join"
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("uid://dbcf4orn631hi")
 spawn_path = NodePath("..")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(136, -291)
+sprite_frames = SubResource("SpriteFrames_xucra")
+frame = 5
+frame_progress = 0.37186
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"pending_changes": {},
+"slice_section": true
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"should_round_fps": true,
+"slice": "",
+"source": "res://Art/characters/Ball.aseprite",
+"source_uid": 5896152012305897030
+}
+metadata/_aseprite_wizard_source_file_hash_ = "d0b3ca99c11f51bcb7d7effd9e8c49f5"
 
 [connection signal="pressed" from="Host" to="." method="_on_host_pressed"]
 [connection signal="pressed" from="Join" to="." method="_on_join_pressed"]
