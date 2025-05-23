@@ -1,0 +1,18 @@
+# Godot-specific
+.import/
+.export/
+.godot/
+*.godot/imported/
+*.translation
+*.converted-res
+
+# Mono / C# stuff
+mono_crash.*
+*.csproj
+*.sln
+obj/
+bin/
+
+# OS-specific
+.DS_Store
+Thumbs.db
