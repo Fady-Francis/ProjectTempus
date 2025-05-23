@@ -1,0 +1,14 @@
+# Godot-specific
+.import/
+.godot/
+mono/
+export.cfg
+export_presets.cfg
+
+# Build output
+bin/
+obj/
+
+# OS files
+.DS_Store
+Thumbs.db
