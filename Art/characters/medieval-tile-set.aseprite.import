@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cabh5ej1f5e6y"
+path="res://.godot/imported/medieval-tile-set.aseprite-13e79efc0e4c64531eb5746aee24e53a.res"
+
+[deps]
+
+source_file="res://art/characters/medieval-tile-set.aseprite"
+dest_files=["res://.godot/imported/medieval-tile-set.aseprite-13e79efc0e4c64531eb5746aee24e53a.res"]
+
+[params]
+
