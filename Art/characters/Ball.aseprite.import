@@ -2,13 +2,13 @@
 
 importer="aseprite_wizard.plugin.noop"
 type="PackedDataContainer"
-uid="uid://cqae06dw06mxa"
-path="res://.godot/imported/Ball.aseprite-ed5f3d0dea535bd1ccc554e2538e9634.res"
+uid="uid://cmba3mshd4al6"
+path="res://.godot/imported/Ball.aseprite-ba18546563565b5404b4854da8880d5f.res"
 
 [deps]
 
-source_file="res://Art/characters/Ball.aseprite"
-dest_files=["res://.godot/imported/Ball.aseprite-ed5f3d0dea535bd1ccc554e2538e9634.res"]
+source_file="res://art/characters/Ball.aseprite"
+dest_files=["res://.godot/imported/Ball.aseprite-ba18546563565b5404b4854da8880d5f.res"]
 
 [params]
 
